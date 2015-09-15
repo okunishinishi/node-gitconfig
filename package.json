@@ -1,0 +1,43 @@
+{
+  "name": "configgit",
+  "version": "1.0.0",
+  "description": "Run git config command",
+  "main": "lib",
+  "scripts": {
+    "test": "./ci/test.js"
+  },
+  "repository": "okunishinishi/node-configgit",
+  "keywords": [],
+  "author": {
+    "name": "okunishinishi",
+    "email": "okunishitaka.com@gmail.com",
+    "url": "http://okunishitaka.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/okunishinishi/node-configgit/issues"
+  },
+  "homepage": "https://github.com/okunishinishi/node-configgit#readme",
+  "dependencies": {
+    "argx": "^1.3.0",
+    "askconfig": "*",
+    "async": "^1.4.2",
+    "commander": "*",
+    "execcli": "^2.1.1",
+    "objnest": "^1.2.1"
+  },
+  "devDependencies": {
+    "ape-covering": "*",
+    "ape-releasing": "*",
+    "ape-reporting": "*",
+    "ape-tasking": "*",
+    "ape-testing": "*",
+    "ape-tmpl": "*",
+    "ape-updating": "*",
+    "coz": "*",
+    "coz-tmpl": "*",
+    "injectmock": "*",
+    "sharegit": "*"
+  },
+  "preferGlobal": true
+}
