@@ -1,9 +1,9 @@
 /**
- * Test case for getConfig.
+ * Test case for get.
  * Runs with nodeunit.
  */
 
-var getConfig = require('../lib/get_config.js');
+var get = require('../lib/get.js');
 
 exports.setUp = function (done) {
     done();
@@ -14,10 +14,10 @@ exports.tearDown = function (done) {
 };
 
 exports['Get config'] = function (test) {
-    getConfig(function (err, config) {
+    get(function (err, config) {
         test.ifError(err);
         test.ok(config);
-        getConfig('user', function (err, config) {
+        get('user', function (err, config) {
             test.ifError(err);
             test.ok(config);
             test.done();

@@ -1,0 +1,18 @@
+/**
+ * Bud file for index.js
+ */
+
+"use strict";
+
+var cozTmpl = require('coz-tmpl'),
+    pkg = require('../package.json');
+
+module.exports = cozTmpl.indexJsBud({
+    desc:pkg.description,
+    module:pkg.name,
+    dirname:__dirname
+});
+
+if(!module.parent){
+    require('coz').render(__filename);
+}
