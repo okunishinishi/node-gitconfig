@@ -25,3 +25,12 @@ exports['Get config'] = function (test) {
     });
 };
 
+
+exports['Get config sync'] = function (test) {
+    var all = get.sync();
+    test.ok(all);
+    var user = get.sync('user');
+    test.ok(user);
+    test.done();
+};
+
