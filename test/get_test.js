@@ -16,10 +16,8 @@ exports.tearDown = function (done) {
 exports['Get config'] = function (test) {
     get(function (err, config) {
         test.ifError(err);
-        test.ok(config);
         get('user', function (err, config) {
             test.ifError(err);
-            test.ok(config);
             test.done();
         });
     });
@@ -27,10 +25,10 @@ exports['Get config'] = function (test) {
 
 
 exports['Get config sync'] = function (test) {
-    var all = get.sync();
-    test.ok(all);
-    var user = get.sync('user');
-    test.ok(user);
+    test.doesNotThrow(function () {
+        get.sync();
+        get.sync('user');
+    });
     test.done();
 };
 
