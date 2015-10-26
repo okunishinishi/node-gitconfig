@@ -26,7 +26,8 @@
     "askconfig": "^1.0.1",
     "async": "^1.4.2",
     "execcli": "^2.1.1",
-    "objnest": "^1.2.1"
+    "objnest": "^1.2.1",
+    "lodash": "~3.10.0"
   },
   "devDependencies": {
     "ape-covering": "^1.0.8",
