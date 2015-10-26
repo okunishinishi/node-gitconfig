@@ -72,6 +72,11 @@ gitconfig.set({
 },function (err) {
     /*...*/
 });
+gitconfig.unset(['user.mail'], {
+    location:'local'
+},function (err) {
+    /*...*/
+});
 
 gitconfig.get({
     location:'global'
