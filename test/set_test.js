@@ -13,11 +13,21 @@ exports.tearDown = function (done) {
     done();
 };
 
-exports['Set config'] = function (test) {
+exports['Set by key and val'] = function (test) {
+    set("test.quz", "quzzz", {
+        location: 'local'
+    }, function (err) {
+        test.ifError(err);
+        test.done();
+    });
+};
+
+
+exports['Set by object'] = function (test) {
     set({
         test: {
-            foo: 'bar',
-            baz: 'quz'
+            foo2: 'bar',
+            baz2: 'quz'
         }
     }, {
         location: 'local'
