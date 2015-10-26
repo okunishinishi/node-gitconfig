@@ -64,28 +64,56 @@ Usage
 ```javascript
 var gitconfig = require('gitconfig');
 
-
+// Set git config values.
 gitconfig.set({
     'user.mail': "foo@example.com"
 }, {
-    location:'local'
-},function (err) {
-    /*...*/
-});
-gitconfig.unset(['user.mail'], {
-    location:'local'
-},function (err) {
+    location: 'local'
+}, function (err) {
     /*...*/
 });
 
+// Unset git config values.
+gitconfig.unset(['user.mail'], {
+    location: 'local'
+}, function (err) {
+    /*...*/
+});
+
+// Git all config values.
 gitconfig.get({
-    location:'global'
-}, function(err, config){
+    location: 'global'
+}, function (err, config) {
     /*...*/
 });
 ```
 
 <!-- Section from "doc/readme/02.Usage.md.hbs" End -->
+
+<!-- Section from "doc/readme/03.API.md.hbs" Start -->
+
+<a name="section-doc-readme-03-a-p-i-md"></a>
+API
+---
+
+| Signature | Description |
+| --------- | ----------- |
+| gitconfig.get(options, callback) | Get all git config. |
+| gitconfig.get(key, options, callback) | Get config with key. |
+| gitconfig.set(key, val, options, callback) | Set a config value. |
+| gitconfig.set(values, options, callback) | Set mutliple config values. |
+| gitconfig.unset(keys, options, callback) | Un set config value(s). |
+
+
+Options
+-------
+
+| Name | Description |
+| ---- | ----- |
+| location | Config file location. (global, system, or local) |
+
+
+<!-- Section from "doc/readme/03.API.md.hbs" End -->
 
 
 <!-- Sections Start -->
@@ -101,3 +129,12 @@ This software is released under the [MIT License](https://github.com/okunishinis
 <!-- LICENSE End -->
 
 
+<!-- Links Start -->
+<a name="links"></a>
+
+Links
+------
+
++ [git-config](https://git-scm.com/docs/git-config)
+
+<!-- Links End -->

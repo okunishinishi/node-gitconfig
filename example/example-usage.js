@@ -1,16 +1,24 @@
 var gitconfig = require('gitconfig');
 
-
+// Set git config values.
 gitconfig.set({
     'user.mail': "foo@example.com"
 }, {
-    location:'local'
-},function (err) {
+    location: 'local'
+}, function (err) {
     /*...*/
 });
 
+// Unset git config values.
+gitconfig.unset(['user.mail'], {
+    location: 'local'
+}, function (err) {
+    /*...*/
+});
+
+// Git all config values.
 gitconfig.get({
-    location:'global'
-}, function(err, config){
+    location: 'global'
+}, function (err, config) {
     /*...*/
 });

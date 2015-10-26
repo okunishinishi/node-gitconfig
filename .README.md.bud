@@ -19,8 +19,8 @@ module.exports = apeTmpl.readmeMdBud({
         gemnasium: false,
         npm: true
     },
-    overview:'doc/overview.md',
-    links: null,
+    overview: 'doc/overview.md',
+    links: require('./doc/links.json'),
     vars: {}
 });
 

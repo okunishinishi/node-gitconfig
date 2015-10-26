@@ -3,7 +3,8 @@
  * Runs with nodeunit.
  */
 
-var unset = require('../lib/unset.js');
+var set = require('../lib/set.js'),
+    unset = require('../lib/unset.js');
 
 exports.setUp = function (done) {
     done();
@@ -14,12 +15,22 @@ exports.tearDown = function (done) {
 };
 
 exports['Unset config'] = function (test) {
-    unset({
-            test: ['foo','baz']
-        }
-        , function (err) {
+    set('test.foo', 'bar', function (err) {
         test.ifError(err);
-        test.done();
+        unset('test.foo', function (err) {
+            test.ifError(err);
+            test.done();
+        });
+    });
+};
+
+exports['Unset config with array.'] = function (test) {
+    set('test.baz', 'bar', function (err) {
+        test.ifError(err);
+        unset(['test.baz'], function (err) {
+            test.ifError(err);
+            test.done();
+        });
     });
 };
 
