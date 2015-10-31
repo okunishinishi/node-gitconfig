@@ -27,7 +27,6 @@
     "askconfig": "^1.0.1",
     "async": "^1.4.2",
     "execcli": "^2.1.1",
-    "lodash": "~3.10.0",
     "objnest": "^1.2.1"
   },
   "devDependencies": {
