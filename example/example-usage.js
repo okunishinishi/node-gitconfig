@@ -1,4 +1,6 @@
-var gitconfig = require('gitconfig');
+"use strict";
+
+const gitconfig = require('gitconfig');
 
 // Set git config values.
 gitconfig.set({
@@ -12,13 +14,13 @@ gitconfig.set({
 // Unset git config values.
 gitconfig.unset(['user.mail'], {
     location: 'local'
-}, function (err) {
+}, (err) => {
     /*...*/
 });
 
 // Git all config values.
 gitconfig.get({
     location: 'global'
-}, function (err, config) {
+}, (err, config) => {
     /*...*/
 });

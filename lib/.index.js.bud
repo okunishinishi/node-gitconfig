@@ -4,10 +4,10 @@
 
 "use strict";
 
-var cozTmpl = require('coz-tmpl'),
+const apeTmpl = require('ape-tmpl'),
     pkg = require('../package.json');
 
-module.exports = cozTmpl.indexJsBud({
+module.exports = apeTmpl.indexJsBud({
     desc:pkg.description,
     module:pkg.name,
     dirname:__dirname

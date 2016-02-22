@@ -9,7 +9,7 @@
 process.chdir(__dirname + '/..');
 
 var apeTasking = require('ape-tasking'),
-    sharegit = require('sharegit');
+    sharegit = require('../lib');
 
 apeTasking.runTasks('share', [
     function (callback) {

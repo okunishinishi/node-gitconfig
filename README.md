@@ -48,9 +48,9 @@ Run git config command
 <!-- Sections Start -->
 <a name="sections"></a>
 
-<!-- Section from "doc/readme/01.Installation.md.hbs" Start -->
+<!-- Section from "doc/guides/01.Installation.md.hbs" Start -->
 
-<a name="section-doc-readme-01-installation-md"></a>
+<a name="section-doc-guides-01-installation-md"></a>
 Installation
 -----
 
@@ -59,16 +59,18 @@ npm install gitconfig --save
 ```
 
 
-<!-- Section from "doc/readme/01.Installation.md.hbs" End -->
+<!-- Section from "doc/guides/01.Installation.md.hbs" End -->
 
-<!-- Section from "doc/readme/02.Usage.md.hbs" Start -->
+<!-- Section from "doc/guides/02.Usage.md.hbs" Start -->
 
-<a name="section-doc-readme-02-usage-md"></a>
+<a name="section-doc-guides-02-usage-md"></a>
 Usage
 ---------
 
 ```javascript
-var gitconfig = require('gitconfig');
+"use strict";
+
+const gitconfig = require('gitconfig');
 
 // Set git config values.
 gitconfig.set({
@@ -82,24 +84,24 @@ gitconfig.set({
 // Unset git config values.
 gitconfig.unset(['user.mail'], {
     location: 'local'
-}, function (err) {
+}, (err) => {
     /*...*/
 });
 
 // Git all config values.
 gitconfig.get({
     location: 'global'
-}, function (err, config) {
+}, (err, config) => {
     /*...*/
 });
 ```
 
 
-<!-- Section from "doc/readme/02.Usage.md.hbs" End -->
+<!-- Section from "doc/guides/02.Usage.md.hbs" End -->
 
-<!-- Section from "doc/readme/03.API.md.hbs" Start -->
+<!-- Section from "doc/guides/03.API.md.hbs" Start -->
 
-<a name="section-doc-readme-03-a-p-i-md"></a>
+<a name="section-doc-guides-03-a-p-i-md"></a>
 API
 ---
 
@@ -121,7 +123,7 @@ Options
 
 
 
-<!-- Section from "doc/readme/03.API.md.hbs" End -->
+<!-- Section from "doc/guides/03.API.md.hbs" End -->
 
 
 <!-- Sections Start -->

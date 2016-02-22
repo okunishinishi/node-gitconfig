@@ -2,8 +2,9 @@
  * Test case for set.
  * Runs with nodeunit.
  */
+"use strict";
 
-var set = require('../lib/set.js');
+const set = require('../lib/set.js');
 
 exports.setUp = function (done) {
     done();
@@ -16,7 +17,7 @@ exports.tearDown = function (done) {
 exports['Set by key and val'] = function (test) {
     set("test.quz", "quzzz", {
         location: 'local'
-    }, function (err) {
+    }, (err) => {
         test.ifError(err);
         test.done();
     });
@@ -31,7 +32,7 @@ exports['Set by object'] = function (test) {
         }
     }, {
         location: 'local'
-    }, function (err) {
+    }, (err) => {
         test.ifError(err);
         test.done();
     });

@@ -2,8 +2,9 @@
  * Test case for get.
  * Runs with nodeunit.
  */
+"use strict";
 
-var get = require('../lib/get.js');
+const get = require('../lib/get.js');
 
 exports.setUp = function (done) {
     done();
@@ -16,7 +17,7 @@ exports.tearDown = function (done) {
 exports['Get config'] = function (test) {
     get(function (err, config) {
         test.ifError(err);
-        get('user', function (err, config) {
+        get('user',  (err, config) => {
             test.ifError(err);
             test.done();
         });
@@ -25,7 +26,7 @@ exports['Get config'] = function (test) {
 
 
 exports['Get config sync'] = function (test) {
-    test.doesNotThrow(function () {
+    test.doesNotThrow(() => {
         get.sync();
         get.sync('user');
     });
