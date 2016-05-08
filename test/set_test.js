@@ -1,40 +1,35 @@
 /**
  * Test case for set.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
-"use strict";
+'use strict'
 
-const set = require('../lib/set.js');
+const set = require('../lib/set.js')
+const get = require('../lib/get.js')
+const co = require('co')
+const assert = require('assert')
 
-exports.setUp = function (done) {
-    done();
-};
+describe('set', function () {
+  it('Set by key and val', () => co(function * () {
+    yield set('test.quz', 'quzzz', {
+      location: 'local'
+    })
+    let val = yield get('test.quz')
+    assert.equal(val, 'quzzz')
+  }))
 
-exports.tearDown = function (done) {
-    done();
-};
-
-exports['Set by key and val'] = function (test) {
-    set("test.quz", "quzzz", {
-        location: 'local'
-    }, (err) => {
-        test.ifError(err);
-        test.done();
-    });
-};
-
-
-exports['Set by object'] = function (test) {
-    set({
-        test: {
-            foo2: 'bar',
-            baz2: 'quz'
-        }
+  it('Set by object', () => co(function * () {
+    yield set({
+      test: {
+        foo2: 'bar',
+        baz2: 'quz'
+      }
     }, {
-        location: 'local'
-    }, (err) => {
-        test.ifError(err);
-        test.done();
-    });
-};
+      location: 'local'
+    })
+    let val = yield get('test.foo2')
+    assert.equal(val, 'bar')
+  }))
+})
 
+/* global describe, it */

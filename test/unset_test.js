@@ -1,37 +1,35 @@
 /**
  * Test case for unset.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
-"use strict";
+'use strict'
 
-const set = require('../lib/set.js'),
-    unset = require('../lib/unset.js');
+const set = require('../lib/set.js')
+const get = require('../lib/get.js')
+const unset = require('../lib/unset.js')
+const co = require('co')
+const assert = require('assert')
 
-exports.setUp = function (done) {
-    done();
-};
+describe('unset', function () {
+  it('Unset config', () => co(function * () {
+    let val
+    yield set('test.foo', 'bar')
+    val = yield get('test.foo')
+    assert.equal(val, 'bar')
+    yield unset('test.foo')
+    val = yield get('test.foo')
+    assert.equal(typeof val, 'undefined')
+  }))
 
-exports.tearDown = function (done) {
-    done();
-};
+  it('Unset config with array.', () => co(function * () {
+    let val
+    yield set('test.baz', 'bar')
+    val = yield get('test.baz')
+    assert.equal(val, 'bar')
+    yield unset([ 'test.baz' ])
+    val = yield get('test.baz')
+    assert.equal(typeof val, 'undefined')
+  }))
+})
 
-exports['Unset config'] = function (test) {
-    set('test.foo', 'bar', (err) => {
-        test.ifError(err);
-        unset('test.foo', (err) => {
-            test.ifError(err);
-            test.done();
-        });
-    });
-};
-
-exports['Unset config with array.'] = function (test) {
-    set('test.baz', 'bar', (err) => {
-        test.ifError(err);
-        unset(['test.baz'], (err) => {
-            test.ifError(err);
-            test.done();
-        });
-    });
-};
-
+/* global describe, it */

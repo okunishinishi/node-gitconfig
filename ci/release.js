@@ -6,18 +6,16 @@
 
 "use strict";
 
-process.chdir(__dirname + '/..');
+process.chdir(`${__dirname}/..`)
 
-var apeTasking = require('ape-tasking'),
-    apeReleasing = require('ape-releasing');
+const apeTasking = require('ape-tasking')
+const apeReleasing = require('ape-releasing')
 
 apeTasking.runTasks('release', [
-    function releasePackage(callback) {
-        apeReleasing.releasePackage({
-            beforeRelease: [
-                './ci/build.js',
-                './ci/test.js'
-            ]
-        }, callback);
-    }
-], true);
+  () => apeReleasing.releasePackage({
+    beforeRelease: [
+      './ci/build.js',
+      './ci/test.js'
+    ]
+  })
+], true)

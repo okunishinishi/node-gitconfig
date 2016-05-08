@@ -1,35 +1,27 @@
 /**
  * Test case for get.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
-"use strict";
+'use strict'
 
-const get = require('../lib/get.js');
+const get = require('../lib/get.js')
+const co = require('co')
+const assert = require('assert')
 
-exports.setUp = function (done) {
-    done();
-};
+describe('get', function () {
+  it('Get config', () => co(function * () {
+    let config = yield get()
+    assert.ok(config)
+    let user = yield get('user')
+    assert.ok(user)
+  }))
 
-exports.tearDown = function (done) {
-    done();
-};
+  it('Get config sync', () => co(function * () {
+    let config = get.sync()
+    assert.ok(config)
+    let user = get.sync('user')
+    assert.ok(user)
+  }))
+})
 
-exports['Get config'] = function (test) {
-    get(function (err, config) {
-        test.ifError(err);
-        get('user',  (err, config) => {
-            test.ifError(err);
-            test.done();
-        });
-    });
-};
-
-
-exports['Get config sync'] = function (test) {
-    test.doesNotThrow(() => {
-        get.sync();
-        get.sync('user');
-    });
-    test.done();
-};
-
+/* global describe, it */

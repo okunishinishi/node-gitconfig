@@ -6,15 +6,13 @@
 
 "use strict";
 
-process.chdir(__dirname + '/..');
+process.chdir(`${__dirname}/..`)
 
-var apeTasking = require('ape-tasking'),
-    apeCovering = require('ape-covering');
+const apeTasking = require('ape-tasking')
+const apeCovering = require('ape-covering')
 
 apeTasking.runTasks('cover', [
-    function measureCoverage(callback) {
-        apeCovering.measureCoverage('ci/test.js', [], {
-            dir: 'coverage'
-        }, callback);
-    }
-], true);
+  () => apeCovering.measureCoverage('ci/test.js', [], {
+    dir: 'coverage'
+  })
+], true)
