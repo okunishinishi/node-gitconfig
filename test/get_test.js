@@ -13,14 +13,14 @@ describe('get', function () {
     let config = yield get()
     assert.ok(config)
     let user = yield get('user')
-    assert.ok(user)
+    console.log('user', user)
   }))
 
   it('Get config sync', () => co(function * () {
     let config = get.sync()
     assert.ok(config)
     let user = get.sync('user')
-    assert.ok(user)
+    console.log('user', user)
   }))
 })
 
