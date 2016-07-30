@@ -22,22 +22,21 @@
   },
   "homepage": "https://github.com/okunishinishi/node-gitconfig#readme",
   "dependencies": {
-    "argx": "^2.0.2",
+    "argx": "^3.0.0",
     "arrayreduce": "^2.1.0",
-    "askconfig": "^3.0.2",
+    "askconfig": "^3.0.5",
     "co": "^4.6.0",
-    "execcli": "^4.0.6",
-    "objnest": "^3.0.3"
+    "execcli": "^4.0.8",
+    "objnest": "^3.0.6"
   },
   "devDependencies": {
-    "ape-covering": "^3.0.3",
-    "ape-releasing": "^4.0.1",
+    "amocha": "^1.0.10",
+    "ape-releasing": "^4.0.4",
     "ape-reporting": "^3.0.1",
-    "ape-tasking": "^4.0.3",
-    "ape-testing": "^4.0.0",
-    "ape-tmpl": "^5.0.11",
-    "ape-updating": "^4.0.3",
-    "coz": "^6.0.3",
+    "ape-tasking": "^4.0.8",
+    "ape-tmpl": "^5.0.15",
+    "ape-updating": "^4.0.5",
+    "coz": "^6.0.16",
     "injectmock": "^2.0.0"
   },
   "engines": {

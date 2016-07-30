@@ -55,6 +55,7 @@ Run git config command
 <!-- Section from "doc/guides/01.Installation.md.hbs" Start -->
 
 <a name="section-doc-guides-01-installation-md"></a>
+
 Installation
 -----
 
@@ -68,6 +69,7 @@ npm install gitconfig --save
 <!-- Section from "doc/guides/02.Usage.md.hbs" Start -->
 
 <a name="section-doc-guides-02-usage-md"></a>
+
 Usage
 ---------
 
@@ -106,6 +108,7 @@ gitconfig.get({
 <!-- Section from "doc/guides/03.API.md.hbs" Start -->
 
 <a name="section-doc-guides-03-a-p-i-md"></a>
+
 API
 ---
 
