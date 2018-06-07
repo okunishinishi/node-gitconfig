@@ -1,5 +1,5 @@
 {
-  "name": "gitconfig",
+  "name": "@teambit/gitconfig",
   "version": "2.0.5",
   "description": "Run git config command",
   "main": "lib",
