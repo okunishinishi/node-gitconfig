@@ -1,26 +1,26 @@
 {
   "name": "gitconfig",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Run git config command",
   "main": "lib",
   "scripts": {
     "test": "./ci/test.js"
   },
-  "repository": "okunishinishi/node-gitconfig",
+  "repository": "teambit/node-gitconfig",
   "keywords": [
     "git",
     "config"
   ],
   "author": {
-    "name": "Taka Okunishi",
-    "email": "okunishitaka.com@gmail.com",
-    "url": "http://okunishitaka.com"
+    "name": "Team Bit",
+    "email": "teambit@bitsrc.io",
+    "url": "https://bitsrc.io"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/okunishinishi/node-gitconfig/issues"
+    "url": "https://github.com/teambit/node-gitconfig/issues"
   },
-  "homepage": "https://github.com/okunishinishi/node-gitconfig#readme",
+  "homepage": "https://github.com/teambit/node-gitconfig#readme",
   "dependencies": {
     "argx": "^3.0.0",
     "arrayreduce": "^2.1.0",
