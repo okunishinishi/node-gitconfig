@@ -27,6 +27,7 @@
     "askconfig": "^3.0.5",
     "co": "^4.6.0",
     "execcli": "^4.0.8",
+    "git-url-parse": "^9.0.1",
     "objnest": "^3.0.6"
   },
   "devDependencies": {
