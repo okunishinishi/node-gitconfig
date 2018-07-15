@@ -77,7 +77,7 @@ Usage
 ```javascript
 'use strict'
 
-const gitconfig = require('gitconfig')
+const gitconfig = require('@teambit/gitconfig')
 
 // Set git config values.
 gitconfig.set({
