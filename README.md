@@ -101,7 +101,13 @@ gitconfig.get({
 }).then((config) => {
   /* ... */
 })
+
+// Get git origin url.
+gitconfig.getRepoUrl().then((config) => {
+  /* ... */
+})
 ```
+
 
 
 <!-- Section from "doc/guides/02.Usage.md.hbs" End -->
