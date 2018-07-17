@@ -103,7 +103,7 @@ gitconfig.get({
 })
 
 // Get git origin url.
-gitconfig.getRepoUrl().then((config) => {
+gitconfig.getUrl().then((config) => {
   /* ... */
 })
 ```
