@@ -102,7 +102,12 @@ gitconfig.get({
   /* ... */
 })
 
-// Get git origin url.
+/**
+ * @name getUrl
+ * @description Get git remote name url or all remotes urls.
+ * @param remoteName - string - remotname to fetch url
+ * @return returns the remote names url if specified or all remote names urls if nothing is passed
+ */
 gitconfig.getUrl().then((config) => {
   /* ... */
 })
