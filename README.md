@@ -77,7 +77,7 @@ Usage
 ```javascript
 'use strict'
 
-const gitconfig = require('gitconfig')
+const gitconfig = require('@teambit/gitconfig')
 
 // Set git config values.
 gitconfig.set({
@@ -101,7 +101,18 @@ gitconfig.get({
 }).then((config) => {
   /* ... */
 })
+
+/**
+ * @name getUrl
+ * @description Get git remote name url or all remotes urls.
+ * @param remoteName - string - remotname to fetch url
+ * @return returns the remote names url if specified or all remote names urls if nothing is passed
+ */
+gitconfig.getUrl().then((config) => {
+  /* ... */
+})
 ```
+
 
 
 <!-- Section from "doc/guides/02.Usage.md.hbs" End -->
