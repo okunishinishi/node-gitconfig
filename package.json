@@ -24,20 +24,20 @@
   "dependencies": {
     "argx": "^3.0.0",
     "arrayreduce": "^2.1.0",
-    "askconfig": "^3.0.5",
+    "askconfig": "^4.0.1",
     "co": "^4.6.0",
-    "execcli": "^4.0.8",
+    "execcli": "^5.0.2",
     "lodash.get": "^4.4.2",
-    "objnest": "^3.0.6"
+    "objnest": "^4.1.4"
   },
   "devDependencies": {
-    "amocha": "^1.0.10",
+    "amocha": "^5.0.0",
     "ape-releasing": "^4.0.4",
     "ape-reporting": "^3.0.1",
     "ape-tasking": "^4.0.8",
-    "ape-tmpl": "^5.0.15",
-    "ape-updating": "^4.0.5",
-    "coz": "^6.0.16",
+    "ape-tmpl": "^6.0.10",
+    "ape-updating": "^5.0.1",
+    "coz": "^7.0.2",
     "injectmock": "^2.0.0"
   },
   "engines": {
