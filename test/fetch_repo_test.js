@@ -4,7 +4,7 @@
  */
 'use strict'
 
-const fetchRepo = require('../lib/fetchRepo.js')
+const fetchRepo = require('../lib/fetch_repo.js')
 const assert = require('assert')
 
 describe('fetch-repo', function () {
